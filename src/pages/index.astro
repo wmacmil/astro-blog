@@ -3,6 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import { Image } from '@astrojs/image/components';
 ---
 
 <!DOCTYPE html>
@@ -43,6 +44,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 					href="https://github.com/Charca/astro-blog-template"
 					>astro-blog-template
 				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
+			</p>
+			<p>
+        Here is a picture of me :)
+        <Image src={import('../assets/lookingGlass.jpg')} height={300} aspectRatio={3/2}>
 			</p>
 		</main>
 		<Footer />
